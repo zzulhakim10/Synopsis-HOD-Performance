@@ -3,85 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multilingual Website</title>
+    <title>Leaderart's Journey</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="welcome-container">
-        <h1>Welcome! Please select your language:</h1>
-        <div id="language-selector">
-            <button onclick="setLanguage('en')">English</button>
-            <button onclick="setLanguage('ms')">Malay</button>
-            <button onclick="setLanguage('zh')">Chinese</button>
-            <button onclick="setLanguage('ne')">Nepali</button>
-            <button onclick="setLanguage('my')">Burmese</button>
-            <button onclick="setLanguage('vi')">Vietnamese</button>
-            <button onclick="setLanguage('id')">Indonesian</button>
-        </div>
-   <!-- Content sections for each language -->
+    <div>
+        <h1>Welcome to Leaderart's Journey!</h1>
+        <p>Choose your language:</p>
+
+        <!-- Language selection buttons -->
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('ms')">Malay</button>
+        <button onclick="changeLanguage('zh')">Chinese</button>
+        <button onclick="changeLanguage('ne')">Nepali</button>
+        <button onclick="changeLanguage('my')">Burmese</button>
+        <button onclick="changeLanguage('vi')">Vietnamese</button>
+        <button onclick="changeLanguage('id')">Indonesian</button>
+    </div>
+
+    <!-- Content sections for each language -->
     <div id="content">
         <!-- English Content -->
         <div id="en" class="lang-content">
-            <h2>Hello, welcome to our website!</h2>
-            <p>This is the English content.</p>
-            <h3>Story Synopsis</h3>
-            <p>
-                The Story of Leaderart's Journey:
-
-The tale begins in a vibrant underwater world, where Picca and his friends are having fun playing. Picca decides to share a story with them, and it takes the form of a lively and colorful journey that follows a group of individuals who start a business together.
-A passionate young man moves to Malaysia from Taiwan with his family, dreaming of creating something big. He buys a warehouse and envisions turning it into a space for creativity. The family (Mr. Roger, Mrs. Liu, Peter, and Charis) excitedly starts setting up the warehouse, though Mrs. Liu wonders if they’ll be able to handle everything themselves. The scene ends with a hint of chaos, as they recruit more people to help.
-As the warehouse starts buzzing with activity, five department representatives (Production, Quality, Marketing, Finance, and Technical) come together with enthusiasm, each eager to bring their unique skills and ideas to the table. But things don’t go smoothly—there are plenty of “oops” moments, from failed attempts at production to marketing misfires, and technical difficulties. However, the team learns from these setbacks, finding strength in working together.
-The team’s growth continues as new foreign workers from Nepal, Myanmar, Vietnam, and Indonesia join in. Each person brings their own story and culture, adding more color to the journey. The atmosphere becomes more lively, and they sing and work together, united in their mission to create something meaningful.
-The company faces its biggest test when they present their products to potential clients. The first few clients are skeptical and critical, but just as hope seems lost, the final client is thrilled with their vibrant markers and highlighters, believing they have the potential to be the next big thing.
-The story ends with the company celebrating its success—not just as a factory, but as a family. They reflect on the journey of growth, teamwork, and the power of creativity, culminating in a sense of pride and accomplishment.
-Back in the underwater world, Picca’s friends thank him for the story, and he promises to share another adventure next time, leaving the audience with a sense of wonder and excitement.
-            </p>
+            <h2>The Story of Leaderart's Journey</h2>
+            <p>The tale begins in a vibrant underwater world, where Picca and his friends are having fun playing. Picca decides to share a story with them, and it takes the form of a lively and colorful journey that follows a group of individuals who start a business together.</p>
+            <p>A passionate young man moves to Malaysia from Taiwan with his family, dreaming of creating something big. He buys a warehouse and envisions turning it into a space for creativity. The family (Mr. Roger, Mrs. Liu, Peter, and Charis) excitedly starts setting up the warehouse, though Mrs. Liu wonders if they’ll be able to handle everything themselves. The scene ends with a hint of chaos, as they recruit more people to help.</p>
+            <p>As the warehouse starts buzzing with activity, five department representatives (Production, Quality, Marketing, Finance, and Technical) come together with enthusiasm, each eager to bring their unique skills and ideas to the table. But things don’t go smoothly—there are plenty of “oops” moments, from failed attempts at production to marketing misfires, and technical difficulties. However, the team learns from these setbacks, finding strength in working together.</p>
+            <p>The team’s growth continues as new foreign workers from Nepal, Myanmar, Vietnam, and Indonesia join in. Each person brings their own story and culture, adding more color to the journey. The atmosphere becomes more lively, and they sing and work together, united in their mission to create something meaningful.</p>
+            <p>The company faces its biggest test when they present their products to potential clients. The first few clients are skeptical and critical, but just as hope seems lost, the final client is thrilled with their vibrant markers and highlighters, believing they have the potential to be the next big thing.</p>
+            <p>The story ends with the company celebrating its success—not just as a factory, but as a family. They reflect on the journey of growth, teamwork, and the power of creativity, culminating in a sense of pride and accomplishment.</p>
+            <p>Back in the underwater world, Picca’s friends thank him for the story, and he promises to share another adventure next time, leaving the audience with a sense of wonder and excitement.</p>
         </div>
-        
+
         <!-- Malay Content -->
         <div id="ms" class="lang-content" style="display: none;">
-            <h2>Selamat datang ke laman web kami!</h2>
-            <p>Ini adalah kandungan dalam Bahasa Melayu.</p>
-            <h3>Sinopsis Cerita</h3>
-            <p>
-Kisah Perjalanan Leaderart:
-
-Kisah ini bermula dalam dunia bawah air yang meriah, di mana Picca dan rakan-rakannya berseronok bermain. Picca memutuskan untuk berkongsi cerita dengan mereka, dan ia mengambil bentuk perjalanan yang meriah dan berwarna-warni yang mengikuti sekumpulan individu yang memulakan perniagaan bersama-sama.
-Seorang lelaki muda yang bersemangat berpindah ke Malaysia dari Taiwan bersama keluarganya, bermimpi untuk mencipta sesuatu yang besar. Dia membeli sebuah gudang dan membayangkan mengubahnya menjadi ruang untuk kreativiti. Keluarga (En. Roger, Puan Liu, Peter, dan Charis) dengan teruja mula menyediakan gudang, walaupun Puan Liu tertanya-tanya sama ada mereka akan dapat mengendalikan semuanya sendiri. Adegan itu berakhir dengan sedikit huru-hara, kerana mereka merekrut lebih ramai orang untuk membantu.
-Ketika gudang mula sibuk dengan aktiviti, lima wakil jabatan (Pengeluaran, Kualiti, Pemasaran, Kewangan dan Teknikal) datang bersama-sama dengan semangat, masing-masing bersemangat untuk membawa kemahiran dan idea unik mereka ke meja. Tetapi perkara tidak berjalan dengan lancar—terdapat banyak detik "ops", daripada percubaan yang gagal pada pengeluaran kepada kesilapan pemasaran dan masalah teknikal. Walau bagaimanapun, pasukan belajar daripada kemunduran ini, mencari kekuatan dalam bekerjasama.
-Pertumbuhan pasukan berterusan apabila pekerja asing baharu dari Nepal, Myanmar, Vietnam dan Indonesia menyertainya. Setiap orang membawa kisah dan budaya mereka sendiri, menambah lebih banyak warna dalam perjalanan. Suasana menjadi lebih meriah, dan mereka menyanyi dan bekerjasama, bersatu dalam misi mereka untuk mencipta sesuatu yang bermakna.
-Syarikat itu menghadapi ujian terbesarnya apabila mereka membentangkan produk mereka kepada bakal pelanggan. Beberapa pelanggan pertama adalah ragu-ragu dan kritikal, tetapi sama seperti harapan seolah-olah hilang, pelanggan terakhir teruja dengan penanda dan penyerlah bertenaga mereka, percaya mereka mempunyai potensi untuk menjadi perkara besar seterusnya.
-Kisah ini berakhir dengan syarikat itu meraikan kejayaannya—bukan hanya sebagai sebuah kilang, tetapi sebagai sebuah keluarga. Mereka mencerminkan perjalanan pertumbuhan, kerja berpasukan, dan kuasa kreativiti, yang memuncak dengan rasa bangga dan pencapaian.
-Kembali ke dunia bawah air, rakan-rakan Picca mengucapkan terima kasih kepadanya untuk cerita itu, dan dia berjanji untuk berkongsi pengembaraan lain pada masa akan datang, membuatkan penonton berasa hairan dan teruja.
-            </p>
+            <h2>Perjalanan Leaderart</h2>
+            <p>Cerita bermula di dunia bawah laut yang meriah, di mana Picca dan kawan-kawannya sedang berseronok bermain. Picca memutuskan untuk berkongsi cerita dengan mereka, dan ia berbentuk perjalanan yang ceria dan berwarna-warni yang mengikuti sekumpulan individu yang memulakan perniagaan bersama-sama.</p>
+            <p>Seorang pemuda yang bersemangat berpindah ke Malaysia dari Taiwan bersama keluarganya, dengan impian untuk mencipta sesuatu yang besar. Dia membeli sebuah gudang dan membayangkan untuk mengubahnya menjadi ruang kreativiti. Keluarga (Encik Roger, Puan Liu, Peter, dan Charis) dengan semangat mula menyusun gudang itu, walaupun Puan Liu tertanya-tanya jika mereka dapat menangani semua ini sendiri. Adegan berakhir dengan petunjuk kekacauan, apabila mereka merekrut lebih banyak orang untuk membantu.</p>
+            <p>Seiring gudang itu mula sibuk dengan aktiviti, lima wakil jabatan (Pengeluaran, Kualiti, Pemasaran, Kewangan, dan Teknikal) datang bersama-sama dengan semangat, masing-masing ingin membawa kemahiran dan idea unik mereka ke meja. Tetapi perkara tidak berjalan lancar—terdapat banyak "oops" moment, dari percubaan pengeluaran yang gagal hingga kesilapan pemasaran dan masalah teknikal. Walau bagaimanapun, pasukan belajar dari kegagalan ini, menemui kekuatan dalam bekerja bersama.</p>
+            <p>Pembangunan pasukan terus berlanjut apabila pekerja asing baru dari Nepal, Myanmar, Vietnam, dan Indonesia menyertai. Setiap orang membawa cerita dan budaya mereka sendiri, menambahkan lebih banyak warna kepada perjalanan ini. Suasana menjadi lebih hidup, dan mereka menyanyi dan bekerja bersama, bersatu dalam misi mereka untuk mencipta sesuatu yang bermakna.</p>
+            <p>Syarikat itu menghadapi ujian terbesar apabila mereka mempersembahkan produk mereka kepada pelanggan berpotensi. Beberapa pelanggan pertama skeptikal dan kritikal, tetapi ketika harapan seolah-olah hilang, pelanggan terakhir teruja dengan penanda dan penyorot mereka yang berwarna-warni, percaya bahawa produk itu mempunyai potensi untuk menjadi perkara besar yang seterusnya.</p>
+            <p>Cerita berakhir dengan syarikat itu meraikan kejayaan mereka—bukan hanya sebagai sebuah kilang, tetapi sebagai sebuah keluarga. Mereka merenung perjalanan pertumbuhan, kerjasama, dan kuasa kreativiti, yang berakhir dengan rasa bangga dan pencapaian.</p>
+            <p>Kembali di dunia bawah laut, kawan-kawan Picca berterima kasih kepadanya atas cerita itu, dan dia berjanji untuk berkongsi pengembaraan lain pada masa akan datang, meninggalkan penonton dengan rasa kagum dan semangat.</p>
         </div>
-        
+
         <!-- Chinese Content -->
         <div id="zh" class="lang-content" style="display: none;">
-            <h2>欢迎来到我们的网站！</h2>
-            <p>这是中文内容。</p>
-            <h3>故事梗概</h3>
-            <p>
-Leaderart 的旅程故事：
-
-故事开始于一个充满活力的海底世界，Picca 和他的朋友们在那里玩得很开心。Picca 决定与他们分享一个故事，这个故事以生动活泼、色彩缤纷的旅程的形式出现，讲述了一群人一起创业的故事。
-一个充满激情的年轻人和家人从台湾搬到马来西亚，梦想着创造一番大事业。他买了一个仓库，并设想将其变成一个创意空间。一家人（Roger 先生、刘太太、Peter 和 Charis）兴奋地开始设置仓库，但刘太太怀疑他们是否能自己处理好一切。随着他们招募更多人来帮忙，场景以一丝混乱结束。
-随着仓库开始热闹起来，五个部门代表（生产、质量、营销、财务和技术）满怀热情地聚集在一起，每个人都渴望将自己独特的技能和想法带到谈判桌上。但事情进展并不顺利——有很多“糟糕”的时刻，从生产失败到营销失败，再到技术困难。然而，团队从这些挫折中吸取了教训，在共同努力中找到了力量。
-随着来自尼泊尔、缅甸、越南和印度尼西亚的新外籍工人的加入，团队的成长仍在继续。每个人都带来了自己的故事和文化，为旅程增添了更多色彩。气氛变得更加活跃，他们一起唱歌和工作，团结一致，共同创造有意义的东西。
-当公司向潜在客户展示他们的产品时，他们面临着最大的考验。最初的几个客户持怀疑和批评态度，但就在希望似乎破灭的时候，最后一位客户对他们鲜艳的记号笔和荧光笔感到兴奋，相信他们有潜力成为下一个大热门。
-故事以公司庆祝其成功而结束——不仅仅是作为一家工厂，而是一个家庭。他们回顾了成长、团队合作和创造力的旅程，最终产生了一种自豪感和成就感。
-回到水下世界，皮卡的朋友们感谢他讲的故事，他承诺下次再分享另一次冒险，让观众感到惊奇和兴奋。
-            </p>
+            <h2>Leaderart的旅程</h2>
+            <p>故事开始于一个充满活力的水下世界，Picca和他的朋友们正在愉快地玩耍。Picca决定与他们分享一个故事，这个故事的形式是一个生动多彩的旅程，讲述了一群人共同创办企业的故事。</p>
+            <p>一位充满激情的年轻人带着家人从台湾移居到马来西亚，梦想着创造一些伟大的事情。他购买了一座仓库，并计划将其转变为一个创意空间。这个家庭（罗杰先生，刘女士，彼得和Charis）兴奋地开始布置仓库，虽然刘女士担心他们是否能够自己应付所有的事情。这个场景以一种混乱的暗示结束，他们开始招募更多的人来帮忙。</p>
+            <p>随着仓库开始充满活动，五个部门代表（生产、质量、营销、财务和技术）满怀热情地聚在一起，每个人都渴望为这个项目带来他们独特的技能和创意。但事情并不顺利——有很多“哎呀”时刻，从生产失败到营销失误，再到技术问题。然而，团队从这些挫折中汲取教训，通过团结协作找到了力量。</p>
+            <p>随着团队的壮大，来自尼泊尔、缅甸、越南和印尼的外国工人加入其中。每个人都带来了他们自己的故事和文化，增添了旅程的色彩。气氛变得更加热烈，他们一起唱歌，一起工作，为了创造一些有意义的东西而团结一致。</p>
+            <p>公司面临最大的考验，当他们将产品展示给潜在客户时，前几个客户持怀疑态度，并且批评产品。然而，当希望似乎破灭时，最后一个客户对他们充满活力的马克笔和荧光笔非常感兴趣，认为它们有潜力成为下一个大热产品。</p>
+            <p>故事的结尾，公司庆祝了他们的成功——不仅仅作为一家工厂，而是作为一个大家庭。他们反思了成长、团队合作和创造力的力量，最终获得了自豪和成就感。</p>
+            <p>回到水下世界，Picca的朋友们感谢他讲述这个故事，他承诺下一次再分享一次冒险，留下观众充满好奇和兴奋的心情。</p>
         </div>
-        
-        <!-- More language sections like Nepali, Burmese, etc. -->
-        <!-- Repeat for each language section, adding the appropriate content -->
-    </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
-        <h2 id="welcome-text"></h2>
+        <!-- Nepali Content -->
+        <div id="ne" class="lang-content" style="display: none;">
+            <h2>Leaderart को यात्रा</h2>
+            <p>कथा एक जीवित र रंगीन यात्रा को रूपमा शुरू हुन्छ जुन एक समूहको बारेमा हो जसले सँगै व्यापार सुरु गर्छ। पिका र उसका साथीहरू पानीमुनि खेल्दै रमाइलो गर्दै छन्। पिकाले उनीहरूलाई एउटा कथा सुनाउने निर्णय गर्छन्, र त्यो कथा रंगीन र रोचक यात्रा को रूपमा प्रस्तुत हुन्छ।</p>
+            <p>एक जोशिला युवकले आफ्नो परिवारसँग मिलेर ताइवानबाट मलेसिया सर्न्छ र ठूलो कुरा सिर्जना गर्ने सपना देख्छ। उसले एक गोदाम किन्छ र त्यसलाई सिर्जनात्मकता को स्थानमा परिणत गर्ने कल्पना गर्छ। परिवार (श्री. रोजर, श्रीमती लियू, पीटर, र चारिस) उत्साहित हुँदै गोदामलाई सेटअप गर्न थाल्छन्, यद्यपि श्रीमती लियूले चिन्ता व्यक्त गर्छिन् कि उनीहरू सबै कुरा आफैं गर्न सक्षम हुनेछन् कि छैन। दृश्यको अन्त्यमा केही गडबडीको संकेत दिन्छ, जब उनीहरूले अरु व्यक्तिहरूलाई मद्दतको लागि भर्ती गर्न थाल्छन्।</p>
+            <p>जसरी गोदाममा गतिविधि बढ्दै जान्छ, उत्पादन, गुणस्तर, विपणन, वित्त र प्राविधिक प्रतिनिधिहरू आफ्नो अनूठा विचार र सीप ल्याउन उत्साहित छन्। यद्यपि धेरै समस्याहरू आएका छन्—उत्पादनमा विफलता, विपणनमा गल्तीहरू र प्राविधिक समस्याहरू। तर टोलीले यी समस्याहरूबाट पाठ सिक्छ र सहकार्यमा बल पाउँछ।</p>
+            <p>जसरी टोलीको विकास जारी रहन्छ, नयाँ विदेशी कामदारहरू नेपाल, म्यानमार, भियतनाम र इन्डोनेसियाबाट सामेल हुन्छन्। प्रत्येक व्यक्तिले आफ्नै कथा र संस्कृतिलाई यात्रा मा थप्छ। वातावरण अझ बढी जीवन्त हुन्छ, र उनीहरू गाउने र सँगै काम गर्ने गर्दछन्, सँगै केही अर्थपूर्ण सिर्जना गर्ने उद्देश्यले।</p>
+            <p>कम्पनीको सबैभन्दा ठूलो परीक्षा तब आउँछ जब उनीहरूले आफ्नो उत्पादन संभावित ग्राहकहरूलाई प्रस्तुत गर्छन्। पहिलो केही ग्राहकहरू शंका र आलोचनात्मक छन्, तर जब आशा हराउँदैन, अन्तिम ग्राहक आफ्ना रंगीन मार्कर र हाइलाइटरहरूको प्रति अत्यन्त उत्साहित हुन्छन् र विश्वास गर्छन् कि यसमा ठूलो भविष्य छ।</p>
+            <p>कथा अन्त्यमा कम्पनी आफ्नो सफलता मनाउँछ—केवल एक कारखाना होइन, एक परिवारको रूपमा। उनीहरूले आफ्नो यात्रा, टीमवर्क, र सिर्जनात्मकताको शक्ति सम्झेर गर्व र सफलता महसुस गर्दछन्।</p>
+            <p>पानीमुनि संसारमा फर्केर, पिकाका साथीहरूले उसलाई धन्यवाद दिन्छन्, र उसले अर्को साहसिक कार्य साझा गर्ने वाचा गर्छ, जसले दर्शकलाई चमत्कारी र उत्तेजना महसुस गराउँछ।</p>
+        </div>
+
+        <!-- Burmese Content -->
+        <div id="my" class="lang-content" style="display: none;">
+            <h2>Leaderart ၏ ခရီးစဉ်</h2>
+            <p>အကြောင်းအရာသည် တော်တော်ကြီးသင့်ရဲ့ အောက်ကရေကမ္ဘာမှာ စတင်သည်။ Picca နှင့် သူ၏ မိတ်ဆွေများသည် ပျော်ရွှင်စွာ ကစားနေကြသည်။ Picca သည် သူတို့ကို ဇာတ်လမ်းတစ်ပုဒ်မျှဝေချင်သည်ဟု ဆုံးဖြတ်ပြီး၊ ၎င်းသည် လမ်းကြောင်းအရွယ်တွင် လည်ပတ်နေသော လူတစ်စု၏ ရဲရင့်သော ခရီးစဉ်ဖြစ်သည်။</p>
+            <p>တစ်ယောက်သောအေးအေးချမ်းချမ်း အသက်ကြီးတစ်ယောက်သည် မယ်လေးရှားမှ တိုင်းရင်းသားတို့နဲ့တူ ဂျာနီဒီနေနေ၏</p>
+        </div>
+
+        <!-- Vietnamese Content -->
+        <div id="vi" class="lang-content" style="display: none;">
+            <h2>Chuyến đi của Leaderart</h2>
+            <p>Câu chuyện bắt đầu ở một thế giới dưới nước đầy màu sắc, nơi Picca và những người bạn của anh ấy đang vui chơi. Picca quyết định chia sẻ một câu chuyện với họ, và câu chuyện này trở thành một chuyến hành trình sống động và đầy màu sắc kể về một nhóm người bắt đầu một doanh nghiệp cùng nhau.</p>
+            <p>Một chàng trai trẻ đầy nhiệt huyết chuyển đến Malaysia cùng gia đình từ Đài Loan với ước mơ tạo ra điều gì đó vĩ đại. Anh mua một nhà kho và tưởng tượng nó sẽ trở thành một không gian sáng tạo. Gia đình (ông Roger, bà Liu, Peter và Charis) háo hức bắt đầu sắp xếp nhà kho, mặc dù bà Liu tự hỏi liệu họ có thể tự xử lý mọi việc một mình hay không. Cảnh kết thúc với một chút hỗn loạn khi họ tuyển dụng thêm người để giúp đỡ.</p>
+            <p>Khi nhà kho bắt đầu rộn ràng với hoạt động, năm đại diện từ các bộ phận (Sản xuất, Chất lượng, Marketing, Tài chính và Kỹ thuật) cùng nhau đến với sự nhiệt tình, mỗi người đều muốn đóng góp những kỹ năng và ý tưởng độc đáo của mình. Tuy nhiên, mọi thứ không suôn sẻ—có rất nhiều khoảnh khắc "ôi trời" từ những nỗ lực sản xuất thất bại, những sai sót trong marketing và những khó khăn kỹ thuật. Tuy nhiên, đội ngũ học hỏi từ những thất bại này và tìm thấy sức mạnh trong việc làm việc cùng nhau.</p>
+            <p>Sự phát triển của đội ngũ tiếp tục khi những công nhân nước ngoài từ Nepal, Myanmar, Việt Nam và Indonesia gia nhập. Mỗi người mang theo câu chuyện và nền văn hóa riêng của mình, tạo thêm màu sắc cho hành trình. Bầu không khí trở nên sinh động hơn, họ hát và làm việc cùng nhau, đoàn kết trong sứ mệnh tạo ra một điều gì đó có ý nghĩa.</p>
+            <p>Công ty phải đối mặt với thử thách lớn nhất khi họ trình bày sản phẩm của mình cho các khách hàng tiềm năng. Những khách hàng đầu tiên thì nghi ngờ và chỉ trích, nhưng khi hy vọng dường như đã tắt, khách hàng cuối cùng lại rất hào hứng với những cây bút đánh dấu và bút highlighter sống động của họ, tin rằng sản phẩm của họ có tiềm năng trở thành một xu hướng lớn tiếp theo.</p>
+            <p>Câu chuyện kết thúc với việc công ty ăn mừng thành công của mình—không chỉ là một nhà máy, mà còn là một gia đình. Họ suy ngẫm về hành trình phát triển, làm việc nhóm và sức mạnh của sự sáng tạo, kết thúc với cảm giác tự hào và thành tựu.</p>
+            <p>Quay trở lại thế giới dưới nước, những người bạn của Picca cảm ơn anh về câu chuyện và anh hứa sẽ chia sẻ một cuộc phiêu lưu khác vào lần sau, để lại cho khán giả cảm giác kỳ diệu và hào hứng.</p>
+        </div>
+
+        <!-- Indonesian Content -->
+        <div id="id" class="lang-content" style="display: none;">
+            <h2>Perjalanan Leaderart</h2>
+            <p>Cerita dimulai di dunia bawah laut yang penuh warna, di mana Picca dan teman-temannya sedang bersenang-senang bermain. Picca memutuskan untuk berbagi cerita dengan mereka, dan cerita tersebut berbentuk perjalanan yang penuh warna dan hidup yang mengikuti sekelompok orang yang memulai bisnis bersama.</p>
+            <p>Seorang pemuda yang penuh semangat pindah ke Malaysia bersama keluarganya dari Taiwan, bermimpi untuk menciptakan sesuatu yang besar. Dia membeli sebuah gudang dan membayangkan akan mengubahnya menjadi ruang kreativitas. Keluarga (Tuan Roger, Nyonya Liu, Peter, dan Charis) dengan semangat mulai menata gudang, meskipun Nyonya Liu bertanya-tanya apakah mereka bisa menangani semuanya sendiri. Adegan berakhir dengan sedikit kekacauan ketika mereka merekrut lebih banyak orang untuk membantu.</p>
+            <p>Ketika gudang mulai sibuk dengan aktivitas, lima perwakilan departemen (Produksi, Kualitas, Pemasaran, Keuangan, dan Teknik) berkumpul dengan semangat, masing-masing ingin membawa keterampilan dan ide unik mereka. Namun, segala sesuatunya tidak berjalan mulus—ada banyak momen "ups" dari kegagalan produksi, kesalahan pemasaran, hingga masalah teknis. Namun, tim belajar dari kegagalan ini dan menemukan kekuatan dalam bekerja sama.</p>
+            <p>Perkembangan tim berlanjut saat pekerja asing baru dari Nepal, Myanmar, Vietnam, dan Indonesia bergabung. Setiap orang membawa cerita dan budaya mereka sendiri, menambahkan warna pada perjalanan ini. Suasana menjadi lebih hidup, mereka bernyanyi dan bekerja bersama, bersatu dalam misi untuk menciptakan sesuatu yang bermakna.</p>
+            <p>Perusahaan menghadapi ujian terbesar ketika mereka mempresentasikan produk mereka kepada calon klien. Beberapa klien pertama skeptis dan mengkritik, tetapi saat harapan tampaknya hampir hilang, klien terakhir sangat senang dengan spidol dan highlighter warna-warni mereka, percaya bahwa produk mereka memiliki potensi untuk menjadi hal besar berikutnya.</p>
+            <p>Cerita berakhir dengan perusahaan merayakan kesuksesan mereka—bukan hanya sebagai pabrik, tetapi sebagai sebuah keluarga. Mereka merenung tentang perjalanan pertumbuhan, kerja sama tim, dan kekuatan kreativitas, yang berakhir dengan rasa bangga dan pencapaian.</p>
+            <p>Kembali ke dunia bawah laut, teman-teman Picca berterima kasih padanya atas cerita itu dan dia berjanji akan berbagi petualangan lain di lain waktu, meninggalkan penonton dengan rasa kagum dan semangat.</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
