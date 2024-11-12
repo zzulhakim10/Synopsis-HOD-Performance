@@ -1,16 +1,62 @@
+/* General styling for the page */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+h1 {
     text-align: center;
-    padding: 20px;
+    margin-top: 30px;
 }
 
-#language-selector button {
-    margin: 10px;
+h2 {
+    text-align: center;
+    color: #0066cc;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    margin: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-#content-container {
+button:hover {
+    background-color: #45a049;
+}
+
+/* Language content sections */
+.lang-content {
+    display: none;
+    padding: 20px;
     margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lang-content p {
+    line-height: 1.6;
+}
+
+/* Style for the container holding the language selection buttons */
+div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Optional: Styling for the content sections */
+#content {
+    margin-top: 30px;
 }
