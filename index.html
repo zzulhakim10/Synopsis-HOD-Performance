@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-container">
+        <h1>Welcome! Please select your language:</h1>
+        <div id="language-selector">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('ms')">Malay</button>
+            <button onclick="setLanguage('zh')">Chinese</button>
+            <button onclick="setLanguage('ne')">Nepali</button>
+            <button onclick="setLanguage('my')">Burmese</button>
+            <button onclick="setLanguage('vi')">Vietnamese</button>
+            <button onclick="setLanguage('id')">Indonesian</button>
+        </div>
+    </div>
+
+    <div id="content-container" style="display:none;">
+        <h2 id="welcome-text"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
