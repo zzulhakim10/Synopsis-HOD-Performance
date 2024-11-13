@@ -1,13 +1,13 @@
 // Function to change content based on language
 function changeLanguage(language) {
     // Hide all language content sections
-    var contents = document.querySelectorAll('.lang-content');
-    contents.forEach(function(content) {
+    const contents = document.querySelectorAll('.lang-content');
+    contents.forEach(content => {
         content.style.display = 'none';
     });
 
     // Show the selected language content
-    var selectedContent = document.getElementById(language);
+    const selectedContent = document.getElementById(language);
     if (selectedContent) {
         selectedContent.style.display = 'block';
     }
