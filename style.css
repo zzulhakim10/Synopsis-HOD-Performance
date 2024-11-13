@@ -1,136 +1,140 @@
-/* Base styles for larger screens */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e0f7fa; /* Light blue background to resemble water */
-    padding-left: 20px;  /* Adds space on the left */
-    padding-right: 20px; /* Adds space on the right */
-    padding-top: 20px;   /* Adds space on the top */
-    padding-bottom: 20px; /* Adds space on the bottom */
-    background-image: url('https://www.transparenttextures.com/patterns/underwater.png'); /* Optional subtle underwater pattern */
-    background-repeat: repeat;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selector</title>
+    <style>
+        /* Base styles for body with underwater theme */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #e0f7fa, #00796b); /* Light blue to teal gradient */
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
 
-header {
-    background-color: #00796b; /* Deep teal for the header */
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;  /* Adds space below the header */
-    border-radius: 10px; /* Rounded corners for a more organic feel */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
+        /* Add subtle texture pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/underwater.png'); /* Subtle underwater pattern */
+            background-repeat: repeat;
+            opacity: 0.2; /* Keep the texture light */
+            pointer-events: none; /* Ensures it doesn't interfere with clicks */
+        }
 
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean sans-serif font for clarity */
-    font-size: 32px; /* Larger header for a bold underwater vibe */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
+        /* Language Selector Button */
+        .language-button {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #004d40; /* Darker teal */
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 50px; /* Space for the button */
+        }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-}
+        /* Bubble effect on click */
+        .language-button::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: bubble-effect 0.6s ease-out forwards;
+            pointer-events: none;
+        }
 
-.box {
-    width: 48%;
-    background-color: #ffffff; /* Light, clean background */
-    margin: 10px 0;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #b2dfdb; /* Soft teal border */
-    border-radius: 10px; /* Rounded corners for a fluid, natural look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    background-image: url('https://www.transparenttextures.com/patterns/diamond.png'); /* Optional pattern for texture */
-    background-size: 10px 10px; /* Subtle texture effect */
-}
+        /* Bubble Animation */
+        @keyframes bubble-effect {
+            0% {
+                transform: scale(0);
+                opacity: 0.8;
+                top: 50%;
+                left: 50%;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.5;
+                top: 30%;
+                left: 30%;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+                top: -30%;
+                left: -30%;
+            }
+        }
 
-/* Mobile-specific styles */
-@media screen and (max-width: 768px) {
-    /* Adjust layout for tablets and smaller screens */
-    .box {
-        width: 100%;  /* Full width for smaller devices */
-        margin: 10px 0;  /* Ensures spacing is consistent between boxes */
-    }
+        /* Hover effect */
+        .language-button:hover {
+            background-color: #00251a; /* Even darker teal on hover */
+            transform: translateY(-4px); /* Slight lift effect */
+        }
 
-    body {
-        padding-left: 15px;  /* Slightly smaller padding for mobile devices */
-        padding-right: 15px;
-    }
+        /* Active effect (when clicked) */
+        .language-button:active {
+            transform: translateY(2px); /* Button presses down */
+        }
 
-    header {
-        padding: 15px;
-    }
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #004d40; /* Dark teal footer */
+            color: white;
+            border-radius: 10px;
+        }
 
-    h1 {
-        font-size: 26px;  /* Slightly smaller font size for smaller devices */
-    }
+        /* Link Styles */
+        a {
+            color: #80cbc4;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .container {
-        padding: 15px;  /* Adjust container padding for smaller screens */
-    }
-}
+        a:hover {
+            color: #004d40;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-@media screen and (max-width: 480px) {
-    /* Further adjustments for very small screens like phones */
-    h1 {
-        font-size: 22px;  /* Smaller font size for small screens */
-    }
+    <h1>Welcome to the Ocean!</h1>
+    <p>Choose your language:</p>
 
-    .box {
-        padding: 15px;
-        margin: 10px 0; /* Ensure spacing is still nice on small screens */
-    }
+    <button class="language-button" onclick="changeLanguage()">Select Language</button>
 
-    body {
-        padding-left: 10px;  /* Even smaller padding for very small screens */
-        padding-right: 10px;
-    }
+    <footer>
+        <p>&copy; 2024 Under the Sea Inc. | All Rights Reserved</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
 
-    .container {
-        padding: 5px;  /* Even smaller container padding for phones */
-    }
+    <script>
+        function changeLanguage() {
+            alert("Language Changed!");  // Placeholder function to simulate language change
+            // You can add real functionality here to change the language
+        }
+    </script>
 
-    header {
-        padding: 12px;
-    }
-
-    h2 {
-        font-size: 18px;  /* Adjust subtitle font size for mobile */
-    }
-}
-
-/* Additional styles for under the sea theme */
-footer {
-    background-color: #004d40; /* Dark teal for footer */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow on top */
-}
-
-a {
-    color: #80cbc4; /* Light teal for links */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #004d40; /* Darker teal on hover */
-    text-decoration: underline;
-}
-
-/* Optionally, you can use this to add images/icons for sea creatures */
-.icon {
-    background-image: url('images/fish-icon.png');
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    vertical-align: middle;
-}
+</body>
+</html>
