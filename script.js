@@ -1,12 +1,16 @@
 // Function to change content based on language
-function changeLanguage(lang) {
-    // Hide all language content
-    const contents = document.querySelectorAll('.lang-content');
-    contents.forEach(content => content.style.display = 'none');
+function changeLanguage(language) {
+    // Hide all language content sections
+    var contents = document.querySelectorAll('.lang-content');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
 
     // Show the selected language content
-    const selectedContent = document.getElementById(lang);
-    selectedContent.style.display = 'block';
+    var selectedContent = document.getElementById(language);
+    if (selectedContent) {
+        selectedContent.style.display = 'block';
+    }
 }
 
 // Function to trigger bubble effect around button
