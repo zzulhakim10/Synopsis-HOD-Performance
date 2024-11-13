@@ -48,6 +48,7 @@ button {
     z-index: 1; /* Ensure button is on top of the bubbles */
 }
 
+/* Button hover effect */
 button:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -56,9 +57,16 @@ button:active {
     transform: scale(0.95);
 }
 
+/* Active button state */
+button.active {
+    background-color: rgba(255, 255, 255, 0.9); /* Highlight active button */
+    color: #006b6c; /* Change text color to match the background */
+}
+
 /* Language content sections */
 .lang-content {
-    display: none;
+    display: none; /* Hide all content by default */
+    transition: all 0.5s ease;
 }
 
 /* Bubbles animation - Surround button like a splash */
@@ -105,4 +113,9 @@ button:active {
     background-size: cover;
     opacity: 0.7;
     z-index: -1;
+}
+
+/* Optional: Add some space at the top of the page */
+.lang-buttons {
+    margin-top: 30px;
 }
