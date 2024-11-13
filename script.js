@@ -1,6 +1,5 @@
-// Function to change content based on language
 function changeLanguage(language) {
-    // Hide all language content sections
+    // Hide all content sections
     const contents = document.querySelectorAll('.lang-content');
     contents.forEach(content => {
         content.style.display = 'none';
@@ -10,6 +9,18 @@ function changeLanguage(language) {
     const selectedContent = document.getElementById(language);
     if (selectedContent) {
         selectedContent.style.display = 'block';
+    }
+
+    // Remove 'active' class from all buttons
+    const buttons = document.querySelectorAll('.language-buttons button');
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Add 'active' class to the clicked button
+    const selectedButton = document.querySelector(`button[onclick="changeLanguage('${language}')"]`);
+    if (selectedButton) {
+        selectedButton.classList.add('active');
     }
 }
 
