@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #006b6c; /* Dark teal background */
-    color: #ffffff; /* White font color */
+    color: rgb(240, 240, 240);
     min-height: 100vh; /* Allow body to expand with content */
     display: flex;
     justify-content: space-evenly;
