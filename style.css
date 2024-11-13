@@ -8,10 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #006b6c; /* Dark teal background */
-    color: #000; /* Black font color */
+    color: #ffffff; /* White font color */
     min-height: 100vh; /* Allow body to expand with content */
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     overflow: auto; /* Allow scrolling */
