@@ -1,201 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Selector</title>
-    <style>
-        /* Base styles for body with underwater theme */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(180deg, #4fc3f7, #00796b); /* Light blue to teal gradient */
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            min-height: 100vh;
-            position: relative;
-        }
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Add subtle texture pattern for underwater effect */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://www.transparenttextures.com/patterns/underwater.png'); /* Subtle underwater pattern */
-            background-repeat: repeat;
-            opacity: 0.1; /* Keep the texture light */
-            pointer-events: none; /* Ensures it doesn't interfere with clicks */
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #006b6c; /* Dark teal background */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
 
-        /* Title and heading with shadow effect */
-        h1, p {
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adds shadow to text */
-            margin: 0;
-            padding: 10px 0;
-        }
+h1, h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e1e5e5;
+}
 
-        /* Language Selector Button */
-        .language-button {
-            position: relative;
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #004d40; /* Darker teal */
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            outline: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-top: 50px; /* Space for the button */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Shadow on the button text */
-        }
+p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 800px;
+}
 
-        /* Bubble effect on click */
-        .language-button::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            transform: scale(0);
-            animation: bubble-effect 0.6s ease-out forwards;
-            pointer-events: none;
-        }
+/* Language selection button styles */
+button {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
 
-        /* Bubble Animation */
-        @keyframes bubble-effect {
-            0% {
-                transform: scale(0);
-                opacity: 0.8;
-                top: 50%;
-                left: 50%;
-            }
-            50% {
-                transform: scale(1.2);
-                opacity: 0.5;
-                top: 30%;
-                left: 30%;
-            }
-            100% {
-                transform: scale(3);
-                opacity: 0;
-                top: -30%;
-                left: -30%;
-            }
-        }
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
-        /* Hover effect */
-        .language-button:hover {
-            background-color: #00251a; /* Even darker teal on hover */
-            transform: translateY(-4px); /* Slight lift effect */
-        }
+button:active {
+    transform: scale(0.95);
+}
 
-        /* Active effect (when clicked) */
-        .language-button:active {
-            transform: translateY(2px); /* Button presses down */
-        }
+/* Language content sections */
+.lang-content {
+    display: none;
+}
 
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #004d40; /* Dark teal footer */
-            color: white;
-            border-radius: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Footer text shadow */
-        }
+/* Bubbles animation */
+.bubble {
+    position: absolute;
+    bottom: -60px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: bubble-animation 3s ease-out infinite;
+}
 
-        /* Link Styles */
-        a {
-            color: #80cbc4;
-            text-decoration: none;
-            font-weight: bold;
-        }
+@keyframes bubble-animation {
+    0% {
+        bottom: -60px;
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
 
-        a:hover {
-            color: #004d40;
-            text-decoration: underline;
-        }
-
-        /* Mobile-specific styles */
-        @media screen and (max-width: 768px) {
-            /* Adjust layout for tablets and smaller screens */
-            .language-button {
-                padding: 12px 24px;
-                font-size: 16px;
-            }
-
-            body {
-                padding-left: 15px;  /* Slightly smaller padding for mobile devices */
-                padding-right: 15px;
-            }
-
-            header {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 26px;  /* Slightly smaller font size for smaller devices */
-            }
-
-            .container {
-                padding: 15px;  /* Adjust container padding for smaller screens */
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            /* Further adjustments for very small screens like phones */
-            h1 {
-                font-size: 22px;  /* Smaller font size for small screens */
-            }
-
-            .language-button {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-
-            body {
-                padding-left: 10px;  /* Even smaller padding for very small screens */
-                padding-right: 10px;
-            }
-
-            .container {
-                padding: 5px;  /* Even smaller container padding for phones */
-            }
-
-            header {
-                padding: 12px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Welcome to the Ocean!</h1>
-    <p>Choose your language:</p>
-
-    <button class="language-button" onclick="changeLanguage()">Select Language</button>
-
-    <footer>
-        <p>&copy; 2024 Under the Sea Inc. | All Rights Reserved</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
-
-    <script>
-        function changeLanguage() {
-            alert("Language Changed!");  // Placeholder function to simulate language change
-            // You can add real functionality here to change the language
-        }
-    </script>
-
-</body>
-</html>
+/* Additional Styling for underwater vibes */
+.seaweed {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 500px;
+    background-image: url('https://img.icons8.com/ios/452/seaweed.png');
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+}
