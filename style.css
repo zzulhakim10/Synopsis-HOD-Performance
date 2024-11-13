@@ -10,16 +10,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(180deg, #e0f7fa, #00796b); /* Light blue to teal gradient */
+            background: linear-gradient(180deg, #4fc3f7, #00796b); /* Light blue to teal gradient */
             background-size: cover;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 20px;
             min-height: 100vh;
             position: relative;
         }
 
-        /* Add subtle texture pattern */
+        /* Add subtle texture pattern for underwater effect */
         body::before {
             content: '';
             position: absolute;
@@ -29,8 +29,16 @@
             bottom: 0;
             background-image: url('https://www.transparenttextures.com/patterns/underwater.png'); /* Subtle underwater pattern */
             background-repeat: repeat;
-            opacity: 0.2; /* Keep the texture light */
+            opacity: 0.1; /* Keep the texture light */
             pointer-events: none; /* Ensures it doesn't interfere with clicks */
+        }
+
+        /* Title and heading with shadow effect */
+        h1, p {
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adds shadow to text */
+            margin: 0;
+            padding: 10px 0;
         }
 
         /* Language Selector Button */
@@ -38,7 +46,7 @@
             position: relative;
             display: inline-block;
             padding: 15px 30px;
-            font-size: 16px;
+            font-size: 18px;
             background-color: #004d40; /* Darker teal */
             color: white;
             border: none;
@@ -47,6 +55,7 @@
             outline: none;
             transition: background-color 0.3s ease, transform 0.2s ease;
             margin-top: 50px; /* Space for the button */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Shadow on the button text */
         }
 
         /* Bubble effect on click */
@@ -102,6 +111,7 @@
             background-color: #004d40; /* Dark teal footer */
             color: white;
             border-radius: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Footer text shadow */
         }
 
         /* Link Styles */
@@ -114,6 +124,57 @@
         a:hover {
             color: #004d40;
             text-decoration: underline;
+        }
+
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            /* Adjust layout for tablets and smaller screens */
+            .language-button {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+
+            body {
+                padding-left: 15px;  /* Slightly smaller padding for mobile devices */
+                padding-right: 15px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 26px;  /* Slightly smaller font size for smaller devices */
+            }
+
+            .container {
+                padding: 15px;  /* Adjust container padding for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* Further adjustments for very small screens like phones */
+            h1 {
+                font-size: 22px;  /* Smaller font size for small screens */
+            }
+
+            .language-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            body {
+                padding-left: 10px;  /* Even smaller padding for very small screens */
+                padding-right: 10px;
+            }
+
+            .container {
+                padding: 5px;  /* Even smaller container padding for phones */
+            }
+
+            header {
+                padding: 12px;
+            }
         }
     </style>
 </head>
