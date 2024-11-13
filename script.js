@@ -1,3 +1,6 @@
+// script.js
+
+// Function to change language content
 function changeLanguage(language) {
     // Hide all content sections
     const contents = document.querySelectorAll('.lang-content');
@@ -18,7 +21,7 @@ function changeLanguage(language) {
     });
 
     // Add 'active' class to the clicked button
-    const selectedButton = document.querySelector(`button[onclick="changeLanguage('${language}')"]`);
+    const selectedButton = document.getElementById(language);
     if (selectedButton) {
         selectedButton.classList.add('active');
     }
@@ -55,7 +58,7 @@ window.onload = () => {
 };
 
 // Add event listener to all language buttons
-document.querySelectorAll('button').forEach(button => {
+document.querySelectorAll('.language-buttons button').forEach(button => {
     button.addEventListener('click', (event) => {
         changeLanguage(event.target.id); // Change language based on button clicked
         triggerBubbleEffect(event); // Trigger bubble effect
