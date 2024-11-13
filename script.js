@@ -4,51 +4,45 @@ function changeLanguage(lang) {
     const contents = document.querySelectorAll('.lang-content');
     contents.forEach(content => content.style.display = 'none');
 
-    // Show the selected language content if it exists
+    // Show the selected language content
     const selectedContent = document.getElementById(lang);
-    if (selectedContent) {
-        selectedContent.style.display = 'block';
-    } else {
-        // If the selected language content does not exist, fall back to English
-        console.warn(`No content available for language: ${lang}. Falling back to English.`);
-        changeLanguage('en');
-    }
-
-    // Save the selected language to localStorage
-    localStorage.setItem('preferredLanguage', lang);
-
-    // Trigger bubble effect
-    triggerBubbleEffect();
+    selectedContent.style.display = 'block';
 }
 
-// Function to trigger bubble effect on button click
-function triggerBubbleEffect() {
-    // Check if a bubble already exists, and remove it before adding a new one
-    const existingBubble = document.querySelector('.bubble');
-    if (existingBubble) {
-        existingBubble.remove();
-    }
-
-    // Create a new bubble and append it to the body
+// Function to trigger bubble effect around button
+function triggerBubbleEffect(event) {
     const bubble = document.createElement('div');
     bubble.classList.add('bubble');
+
+    // Get button position and size
+    const button = event.target;
+    const buttonRect = button.getBoundingClientRect();
+
+    // Set the bubble's position (centered on the button)
+    const bubbleX = buttonRect.left + buttonRect.width / 2 - 75; // Start bubble position
+    const bubbleY = buttonRect.top + buttonRect.height / 2 - 75; // Start bubble position
+
+    bubble.style.left = `${bubbleX}px`;
+    bubble.style.top = `${bubbleY}px`;
+
+    // Append the bubble to the body
     document.body.appendChild(bubble);
 
-    // Remove the bubble after animation ends
+    // Remove bubble after animation is complete
     bubble.addEventListener('animationend', () => {
         bubble.remove();
     });
 }
 
-// Set the default language to English when page loads (or use saved language from localStorage)
+// Set the default language to English when page loads
 window.onload = () => {
-    // Check if there's a saved language preference in localStorage
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage) {
-        // If a language is saved, apply it
-        changeLanguage(savedLanguage);
-    } else {
-        // If no preference is saved, default to English
-        changeLanguage('en');
-    }
+    changeLanguage('en');
 };
+
+// Add event listener to all language buttons
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', (event) => {
+        changeLanguage(event.target.id); // Change language based on button clicked
+        triggerBubbleEffect(event); // Trigger bubble effect
+    });
+});
