@@ -8,10 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #006b6c; /* Dark teal background */
-    color: rgb(240, 240, 240);
+    color: #ffffff; /* White font color */
     min-height: 100vh; /* Allow body to expand with content */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: auto; /* Allow scrolling */
@@ -22,7 +22,6 @@ h1, h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #000; /* Ensure the heading text is black */
 }
 
 p {
@@ -31,10 +30,8 @@ p {
     font-size: 1.1rem;
     line-height: 1.5;
     max-width: 800px;
-    color: #000; /* Black font color for paragraph text */
 }
 
-/* Language selection button styles */
 button {
     background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid #fff;
@@ -62,40 +59,34 @@ button:active {
     display: none;
 }
 
-/* Bubbles animation */
+/* Bubbles animation - Surround button like a splash */
 .bubble {
     position: absolute;
-    bottom: -60px;
-    width: 30px;
-    height: 30px;
+    width: 0;
+    height: 0;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    animation: bubble-animation 3s ease-out infinite;
+    animation: bubble-animation 0.6s ease-out;
+    pointer-events: none; /* Prevent the bubble from interfering with other elements */
 }
 
 @keyframes bubble-animation {
     0% {
-        bottom: -60px;
+        width: 0;
+        height: 0;
         opacity: 1;
-        transform: scale(0.8);
+        transform: scale(0);
+    }
+    50% {
+        width: 100px; /* Set the max size of the bubble */
+        height: 100px;
+        opacity: 0.5;
+        transform: scale(1.5); /* Grow to a larger size */
     }
     100% {
-        bottom: 100%;
+        width: 150px; /* Final size */
+        height: 150px;
         opacity: 0;
-        transform: scale(1.5);
+        transform: scale(2); /* Final size */
     }
-}
-
-/* Additional Styling for underwater vibes */
-.seaweed {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 500px;
-    background-image: url('https://img.icons8.com/ios/452/seaweed.png');
-    background-size: cover;
-    opacity: 0.7;
-    z-index: -1;
 }
