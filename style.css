@@ -9,22 +9,13 @@ body {
     font-family: Arial, sans-serif;
     background-color: #006b6c; /* Dark teal background */
     color: #000; /* Black font color */
-    min-height: 100vh;  /* Ensure body grows to full viewport height */
+    min-height: 100vh; /* Allow body to expand with content */
     display: flex;
-    justify-content: flex-start; /* Start at the top */
-    align-items: center;  /* Center items horizontally */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto; /* Allow scrolling */
     position: relative;
-    padding-top: 20px; /* Add some padding to ensure content isn't right at the top */
-    overflow-y: auto; /* Allow scrolling */
-}
-
-.container {
-    max-width: 800px;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-
 }
 
 h1, h2 {
