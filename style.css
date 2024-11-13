@@ -6,49 +6,49 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #006b6c; /* Dark teal background */
-    color: #ffffff; /* White font color */
-    min-height: 100vh; /* Allow body to expand with content */
+    color: #fff; /* White font color */
+    min-height: 100vh; /* Ensure body expands with content */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: auto; /* Allow scrolling */
+    overflow: auto;
     position: relative;
+    text-align: center; /* Center text by default */
 }
 
 h1, h2 {
-    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 p {
-    text-align: center;
-    margin-bottom: 10px;
     font-size: 1.1rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 20px;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Button styles */
 button {
     background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid #fff;
-    padding: 10px 20px;
+    padding: 12px 30px;
     margin: 10px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
-    position: relative;
-    overflow: hidden;
     transition: all 0.3s ease;
-    color: #000; /* Black text on buttons */
-    z-index: 1; /* Ensure button is on top of the bubbles */
+    color: #000;
+    z-index: 2; /* Ensure button is above the bubbles */
+    position: relative;
 }
 
-/* Button hover effect */
 button:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -57,26 +57,34 @@ button:active {
     transform: scale(0.95);
 }
 
-/* Active button state */
-button.active {
-    background-color: rgba(255, 255, 255, 0.9); /* Highlight active button */
-    color: #006b6c; /* Change text color to match the background */
-}
-
 /* Language content sections */
 .lang-content {
-    display: none; /* Hide all content by default */
-    transition: all 0.5s ease;
+    display: none;
 }
 
-/* Bubbles animation - Surround button like a splash */
+.lang-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.lang-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bubble animation */
 .bubble {
     position: absolute;
     width: 0;
     height: 0;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    pointer-events: none; /* Prevent the bubble from interfering with other elements */
+    pointer-events: none;
     animation: bubble-animation 0.6s ease-out;
 }
 
@@ -88,20 +96,20 @@ button.active {
         transform: scale(0);
     }
     50% {
-        width: 120px; /* Set the max size of the bubble */
+        width: 120px;
         height: 120px;
         opacity: 0.5;
-        transform: scale(1.5); /* Grow to a larger size */
+        transform: scale(1.5);
     }
     100% {
-        width: 150px; /* Final size of the bubble */
+        width: 150px;
         height: 150px;
         opacity: 0;
-        transform: scale(2); /* Final scale */
+        transform: scale(2);
     }
 }
 
-/* Optional: Adding some underwater seaweed effect */
+/* Optional underwater effect (seaweed) */
 .seaweed {
     position: absolute;
     bottom: 0;
@@ -115,7 +123,22 @@ button.active {
     z-index: -1;
 }
 
-/* Optional: Add some space at the top of the page */
-.lang-buttons {
-    margin-top: 30px;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+
+    .lang-content p {
+        font-size: 1rem;
+    }
 }
