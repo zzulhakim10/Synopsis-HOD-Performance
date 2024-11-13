@@ -53,35 +53,53 @@ h1, h2 {
     /* Adjust layout for tablets and smaller screens */
     .box {
         width: 100%;  /* Full width for smaller devices */
+        margin: 10px 0;  /* Ensures spacing is consistent between boxes */
     }
 
     body {
-        padding-left: 10px;  /* Smaller padding for mobile devices */
-        padding-right: 10px;
+        padding-left: 15px;  /* Slightly smaller padding for mobile devices */
+        padding-right: 15px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 26px;  /* Slightly smaller font size for smaller devices */
     }
 
     .container {
-        padding: 10px;
+        padding: 15px;  /* Adjust container padding for smaller screens */
     }
 }
 
 @media screen and (max-width: 480px) {
     /* Further adjustments for very small screens like phones */
     h1 {
-        font-size: 24px;  /* Smaller font size for small screens */
+        font-size: 22px;  /* Smaller font size for small screens */
     }
 
     .box {
         padding: 15px;
+        margin: 10px 0; /* Ensure spacing is still nice on small screens */
     }
 
     body {
-        padding-left: 5px;  /* Even smaller padding for very small screens */
-        padding-right: 5px;
+        padding-left: 10px;  /* Even smaller padding for very small screens */
+        padding-right: 10px;
     }
 
     .container {
-        padding: 5px;
+        padding: 5px;  /* Even smaller container padding for phones */
+    }
+
+    header {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 18px;  /* Adjust subtitle font size for mobile */
     }
 }
 
