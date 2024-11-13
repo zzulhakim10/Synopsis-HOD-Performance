@@ -17,6 +17,7 @@ body {
     overflow: auto;
     position: relative;
     text-align: center; /* Center text by default */
+    padding: 20px; /* Adds padding to body */
 }
 
 h1, h2 {
@@ -34,19 +35,27 @@ p {
     margin-right: auto;
 }
 
+/* Language selection container */
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 20px; /* Space between buttons and content */
+}
+
 /* Button styles */
 button {
     background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid #fff;
     padding: 12px 30px;
-    margin: 10px;
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
+    position: relative;
     transition: all 0.3s ease;
     color: #000;
     z-index: 2; /* Ensure button is above the bubbles */
-    position: relative;
 }
 
 button:hover {
@@ -60,6 +69,10 @@ button:active {
 /* Language content sections */
 .lang-content {
     display: none;
+    max-width: 900px; /* Control maximum width of content */
+    margin-left: auto; /* Center content horizontally */
+    margin-right: auto; /* Center content horizontally */
+    padding: 20px;
 }
 
 .lang-content h2 {
@@ -72,9 +85,6 @@ button:active {
     font-size: 1.1rem;
     margin-bottom: 15px;
     line-height: 1.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Bubble animation */
@@ -126,7 +136,7 @@ button:active {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     body {
-        padding: 20px;
+        padding: 10px; /* Adjust padding on small screens */
     }
 
     h1, h2 {
